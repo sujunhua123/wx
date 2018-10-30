@@ -1,0 +1,43 @@
+<!--pages/project/news/news.wxml-->
+<view class="list">
+  <text>国内珠宝</text>
+   <text>国际珠宝</text>
+   <text>港澳珠宝</text>
+   <text>智能珠宝</text>
+</view>
+
+<view class="slider">
+<swiper  autoplay interval="2000" indicator-dots='{{true}}' duration="500">
+<swiper-item><image src="/images/logo4.jpg" mode="aspectFill"></image></swiper-item>
+<swiper-item><image src="/images/logo3.jpg" ></image></swiper-item>
+<swiper-item><image src="/images/555.jpg" mode="aspectFill"></image></swiper-item>
+<swiper-item><image src="/images/777.jpg" mode="aspectFill"></image></swiper-item>
+</swiper>
+</view>
+
+<scroll-view scroll-x="true"> 
+<view class="uploadWrap" scroll-x="true"> 
+ <view class="upload_Item" wx:for="{{smallnews}}" wx:key="id" > 
+  <image class="upload_Item_img" src="{{item.img_url}}"></image>
+  <text>{{item.title}}</text> 
+ </view> 
+
+</view> 
+</scroll-view> 
+
+<!--新闻列表-->
+<view wx:for="{{newsList}}" wx:key="id" bindtap="toNewDetail" >
+<navigator   class="news-list">
+<view class="img_size">
+<image src="{{item.img_url}}" data-pid="{{item.id}}"></image>
+  </view> 
+<view class="text_size">
+<text  data-pid="{{item.id}}">{{item.title}}</text>
+<text  data-pid="{{item.id}}">{{item.subtitle}}</text>
+</view>
+</navigator>
+ <view class="List"></view>
+</view>
+
+
+

@@ -1,0 +1,101 @@
+<!--pages/project/index/index.wxml-->
+
+
+<!--头部轮播图-->
+<view class="slider">
+<swiper autoplay indicator-dots='{{true}}' interval="2000"  >  
+<swiper-item wx:for="{{lunbo}}" wx:key="{{id}}">
+  <image src="{{item.img_url}}" mode="aspectFill"></image></swiper-item>
+</swiper>
+</view>
+
+
+
+<view class="divider"></view>
+<!--八宫图 循环-->
+
+<view class="index-nav">
+ <navigator class="nav-item" bindtap="jump1">
+  <image src="/images/21.png" ></image>
+ <text>珠宝新闻</text>
+ </navigator>
+
+ <navigator class="nav-item" bindtap="jump2" >
+  <image src="/images/22.png"></image>
+ <text>珠宝产品</text>
+ </navigator>
+
+ <navigator class="nav-item" >
+  <image src="/images/23.png"></image>
+ <text>珠宝供求</text>
+ </navigator>
+
+ <navigator class="nav-item" >
+  <image src="/images/24.png"></image>
+ <text>珠宝品牌</text>
+ </navigator>
+
+ <navigator class="nav-item" >
+  <image src="/images/25.png"></image>
+ <text>优惠活动</text>
+ </navigator>
+
+ <navigator class="nav-item" >
+  <image src="/images/26.png"></image>
+ <text>私人订制</text>
+ </navigator>
+
+ <navigator class="nav-item" >
+  <image src="/images/27.png"></image>
+ <text>招商加盟</text>
+ </navigator>
+
+ <navigator class="nav-item" >
+  <image src="/images/28.png"></image>
+ <text>联系我们</text>
+ </navigator>
+
+
+ 
+</view>
+
+
+
+<view class="divider"></view>
+
+<view class="image">
+  <image src="/images/11111.jpg"></image>
+</view>
+
+<view class="divider"></view>
+
+<view class="Information arrow">
+ <text class="font_size">珠宝资讯</text>
+ <text class="All" bindtap="jump1">更多</text>
+</view>
+
+
+<!--资讯容器列表-->
+
+<view  class="Info1">
+<navigator class="Info1-item" mode="aspectFill" wx:for="{{indexNews}}" wx:key="id" wx:if="{{index<2}}" bindtap="jumpNewDetail">
+   <image src="{{item.img_url}}" data-pid="{{item.pid}}"></image>
+   <text class="ell" data-pid="{{item.pid}}">{{item.title}}</text>
+ </navigator>
+</view>
+
+<view class="Info2">
+ <navigator class="Info2-item" wx:for="{{indexNews}}" wx:key="id" wx:if="{{index>1&&index<6}}" bindtap="jumpNewDetail"> 
+   <image src="{{item.img_url}}" data-pid="{{item.pid}}"></image>
+   <text class="ell" data-pid="{{item.pid}}">{{item.title}}</text>
+ </navigator >
+
+</view>
+
+
+
+
+
+
+
+

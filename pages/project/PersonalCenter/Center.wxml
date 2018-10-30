@@ -1,0 +1,81 @@
+<!--pages/project/PersonalCenter/Center.wxml-->
+
+<view class="avatar">
+ <image src="/images/bababa.png"></image>
+ <text>马云爸爸</text>
+</view>
+
+<view class="divider"></view>
+<view class="cell arrow">
+<navigator class="cell-item">
+<image src="/images/1.png"></image>
+ <text>我的订单</text>
+</navigator>
+<text class="All">查看全部</text>
+</view>
+
+
+<view class="center-nav">
+
+<view class="center-item">
+<image src="/images/11.png"></image>
+<text>待付款</text>
+</view>
+
+<view class="center-item">
+<image src="/images/12.png"></image>
+<text>待发货</text>
+</view>
+
+<view class="center-item">
+<image src="/images/13.png"></image>
+<text>待收货</text>
+</view>
+
+<view class="center-item">
+<image src="/images/14.png"></image>
+<text>待付款</text>
+</view>
+
+<view class="center-item">
+<image src="/images/15.png"></image>
+<text>退款</text>
+</view>
+
+</view>
+
+<view class="divider"></view>
+
+<view class="cell arrow" bindtap="showDetail">
+<navigator class="cell-item">
+<image src="/images/2.png"></image>
+ <text>个人资料</text>
+</navigator>
+</view>
+
+<view class="cell arrow">
+<navigator class="cell-item">
+<image src="/images/3.png"></image>
+ <text>我的优惠券</text>
+</navigator>
+</view>
+
+<view class="cell arrow">
+<navigator class="cell-item">
+<image src="/images/4.png"></image>
+ <text>收货地址</text>
+</navigator>
+</view>
+
+<view class="cell arrow">
+<navigator class="cell-item">
+<image src="/images/5.png"></image>
+ <text>我的收藏夹</text>
+</navigator>
+</view>
+
+<view class="bottom_size">
+ <text>关于我们</text>
+ <text>合作联系</text>
+ <text>申请入驻</text>
+</view>

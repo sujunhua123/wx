@@ -1,0 +1,61 @@
+<!--pages/project/shopCart/shopCart.wxml-->
+<block wx:if="{{hasList}}">
+<view class="nav-cart">
+  <view class="cart-item" wx:for="{{cartsList}}" wx:key="id">
+    <!-- <checkbox class="cart-box"></checkbox> -->
+    <view class="cart-box">       
+     <icon wx:if="{{item.selected}}" type="success" color="green" bindtap="selectList" data-index="{{index}}" />       
+      <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}"/>       
+       </view>
+     <image src="{{item.img_url}}" class="cart-img"></image> 
+    <view class="cart-number">
+        <view>
+          <text>{{item.title}}</text>
+          <image src="/img/delete.png" class="carts-img" bindtap="deleteCarts" data-pid="{{item.pid}}" data-index="{{index}}" ></image>
+          </view>
+            <view class="cart-number2"> 
+            <text class="cart-price" data-index="{{index}}">￥{{item.sum}}</text>
+                <view class="number-group">        
+                    <button class="number-cell" bindtap="lessNum" data-index="{{index}}" data-pid="{{item.pid}}">-</button> 
+                    <input type="number" class="number-cell" value="{{item.num}}"></input>
+                    <button class="number-cell" bindtap="addNum" data-index="{{index}}" data-pid="{{item.pid}}">+</button>
+                </view>  
+            </view>        
+     </view>           
+  </view>
+
+             
+
+
+</view>
+
+
+<!--去结算-->
+<view class="cart-settle">  
+  <view class="cart-all">       
+    <icon wx:if="{{selectAllStatus}}" type="success" color="green" bindtap="selectAll" />         
+     <icon wx:else type="circle" bindtap="selectAll"/>全选
+     <text>合计:￥{{totalPrice}}</text> 
+      </view> 
+      <navigator class="settle">去结算</navigator>     
+      </view>       
+
+
+
+
+
+<!--<view class="cart-settle">
+ <view class="cart-all">
+ <checkbox class="cart-box">全选</checkbox>  
+    合计:￥<text>{{totalPrice}}</text>
+    </view>  
+
+<navigator class="settle">去结算</navigator>
+</view>-->
+</block>
+
+<block wx:else>
+<view class='noCart' bindtap='toList'>
+<view>购物车为空，快去添加商品吧！！</view>
+</view>
+</block>

@@ -1,0 +1,30 @@
+<!--pages/project/userDetail/userDetail.wxml-->
+<view class="avatar center">
+  <image src="{{userDetail.img_url}}"></image>
+</view>
+
+<view class="divider"></view>
+<view class="cell">
+   <navigator class="cell-item arrow">
+    <text>个人详细信息</text>
+   </navigator>
+</view>
+
+<view class="divider"></view>
+<view class="cell">
+<view class="cell-item">
+   <text>用户名:{{userDetail.uname}}</text>
+ </view>
+
+<view class="cell-item">
+  <text>邮件:{{userDetail.email}}</text>
+</view>
+
+<view class="cell-item">
+ <text>性别:{{userDetail.sex}}</text>
+</view>
+
+  <view class="cell-item">
+  <text>电话:{{userDetail.tel}}</text>
+  </view>
+</view>

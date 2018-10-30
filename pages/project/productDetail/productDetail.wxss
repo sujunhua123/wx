@@ -1,0 +1,130 @@
+/* pages/project/Detail/Detail.wxss */
+.slider swiper,
+.slider image{
+  width:100%;
+  height:500rpx;
+}
+
+
+
+.product_name{
+  margin-top:30rpx;
+ margin-left:30rpx;
+}
+
+.product_title{
+   font-size:14px;
+   margin:50rpx 0;
+   color:#8F8F8F;  
+}
+
+.product_title text{
+   margin-left:30rpx;  
+}
+
+.product_title text:first-child{
+   color:red;
+   font-size:18px;
+}
+
+.product_title text:nth-child(2){
+   text-decoration:line-through; 
+}
+
+
+/*承诺*/
+.product_Promise{
+ display:flex;
+ flex-wrap:wrap; 
+ padding:30rpx 0;
+ border-top:1rpx solid #ccc;
+
+}
+.product_Promise view{
+  margin:10rpx 20rpx;
+
+}
+
+.product_Promise view icon{
+  margin:0 12rpx;
+  float:left;
+}
+
+
+.product_Promise text{
+  font-size:14px;
+  color:#7D7D7D;
+  float:left;
+}
+
+/*选择 规格*/
+.product_gui{
+ padding:36rpx 0;
+
+}
+
+.product_gui text:first-child{
+  margin-left:30rpx;
+  font-size:17px;
+}
+
+.product_gui text:last-child{
+  font-size:15px;
+  margin-right:400rpx;
+  color:#7D7D7D;
+}
+
+/*商品详细*/
+.product_detail{
+ display:flex;
+ justify-content:space-around;
+ margin-top:30rpx
+}
+
+.product_detail text{
+  font-size:16px;
+}
+
+
+/*固定定位在底部*/
+.bottom_fixed{
+  position:fixed;
+  display:flex;
+  align-items:center;
+  bottom:0;
+  height:140rpx;
+  width:100%;
+  background:#FFF;
+}
+.bottom_fixed view{
+   display:flex;
+   flex-direction:column;
+   font-size:14px;
+   margin-left:50rpx;
+   color:#A2A2A2;
+}
+
+
+.bottom_fixed image{
+   height:80rpx;
+   width:45rpx;
+}
+
+.btn_1{
+  border:1rpx solid #C1A37B;
+  color:#C1A37B;
+  margin-left:50rpx;
+  height:70rpx;
+  line-height:70rpx;
+  width:220rpx;
+  font-size:16px;
+}
+
+.btn_2{
+  background:red;
+  height:70rpx;
+  line-height:70rpx;
+  color:#fff;
+  font-size:16px;
+  width:220rpx;
+}

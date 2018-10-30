@@ -1,0 +1,24 @@
+<!--pages/project/newsDetail/newsDetail.wxml-->
+
+
+
+<view>
+<title class="new-title">{{newsDetail[0].title}}</title> 
+</view>
+
+<view class="header-size">
+<text>来源:{{newsDetail[0].source}} </text>
+<text class=""> 时间: {{newsDetail[0].releaseTime}}</text>
+</view>
+
+<view class="new-image">
+<image src="{{newsDetail[0].img_url}}"></image>
+</view>
+
+<view class="new-subtitle">
+  <text>{{newsDetail[0].subtitle}}</text>
+</view>
+
+<view class="new-content">
+ <text>{{newsDetail[0].content}}</text>
+</view>

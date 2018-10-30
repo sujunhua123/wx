@@ -1,0 +1,100 @@
+<!--pages/project/Detail/Detail.wxml-->
+<!--商品详情-->
+
+<!--<view class="slider">
+<swiper autoplay indicator-dots='{{true}}' interval="2000"  >  
+<swiper-item >
+  <image mode="aspectFill" src="/images/Jewellery/13.png"></image>
+  </swiper-item>
+
+  <swiper-item >
+  <image src="/images/Jewellery/14.png"></image>
+  </swiper-item>
+
+  <swiper-item >
+  <image src="/images/Jewellery/15.png"></image>
+  </swiper-item>
+</swiper>
+
+</view> -->
+<view class="slider">
+<image src="{{details[0].img_url}}"></image>
+</view>
+
+<view  class="product_name">
+<text>{{details[0].title}}</text>
+</view>
+<view class="product_title"> 
+ <text>￥{{details[0].price}}</text> 
+ <text>￥100.00</text>
+ <text>销量: {{details[0].sales}}件</text>
+ <text>库存:{{details[0].count}}件</text>
+</view>
+
+
+<view class="product_Promise">
+  <view>
+    <icon type="success_circle" size="20"/>
+    <text>正品保障</text>
+  </view> 
+
+  <view>
+    <icon type="success_circle" size="20"/>
+    <text>全国包邮</text>
+  </view>
+
+  <view>
+    <icon type="success_circle" size="20"/>
+    <text>积分抵现</text>
+  </view>
+
+  <view>
+    <icon type="success_circle" size="20"/>
+    <text>极速发货</text>
+  </view>
+
+  <view>
+    <icon type="success_circle" size="20"/>
+    <text>7天退换</text>
+  </view>
+
+</view>
+
+<view class="divider"></view>
+
+<view class="arrow product_gui">
+<text>选择</text>
+<text>规格</text>
+
+</view>
+
+<view class="divider"></view>
+
+<!--商品详情-->
+<view class="product_detail">
+ <text>商品详细</text>
+ <text>评价</text>
+</view>
+
+
+
+<!--固定在底下的按钮-->
+
+<view class="bottom_fixed">
+
+  <view >
+ <image src="/tabs/1.png"></image>
+  <text>首页</text>
+ </view>
+
+
+ <view>
+ <image src="/tabs/100.jpg"></image>
+  <text>客服</text>
+ </view>
+
+<button class="btn_1" bindtap="addshopList">加入购物车</button>
+
+<button class="btn_2" bindtap="buy">立刻购买</button>
+
+</view>

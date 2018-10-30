@@ -1,0 +1,91 @@
+<!--pages/project/list/list.wxml-->
+<view class="Pink_search ">
+ <navigator class="Arrowhead">
+  <input type="search" placeholder='搜索'/>
+      <icon type='search' size='28' color="white"></icon>
+ </navigator> 
+</view>
+
+<!--商品分类-->
+
+<view class="List_size">
+  
+  <view class="List-cell1" > 
+    <text class="List-item1 LeftList{{item.id==_click?'':'yes'}} " wx:for="{{navbar}}" wx:key="{{id}}" data-id="{{item.id}}" bindtap="scrollToViewFn">{{item.title}}</text>
+ 
+   </view>
+  
+
+  <scroll-view class="content" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true" bindscroll="scroll">
+    <view class="List-cell2">
+        <image src="/images/jewellery/5.jpg"></image>
+        <text class="List-item2" id="{{'in'+1}}">专场推荐</text>
+      <view class="List-images">
+          <navigator class="List-img mt"  wx:for="{{products}}" wx:key="{{id}}" wx:if="{{index<3}}" bindtap="jumpList">
+          <image src="{{item.img_url}}" data-pid="{{item.id}}" ></image>
+          <text data-pid="{{item.id}}">{{item.title}}</text>
+       </navigator>
+      </view>
+
+      
+
+        <text class="List-item2" id="{{'in'+2}}">热销商品</text>
+      <view class="List-images">
+          <navigator class="List-img mt" wx:for="{{products}}"wx:key="{{id}}" wx:if="{{index>2&&index<9}}" bindtap="jumpList" >
+          <image src="{{item.img_url}}" data-pid="{{item.id}}" ></image>
+          <text data-pid="{{item.id}}">{{item.title}}</text>
+          </navigator>
+         
+        </view>
+
+       <text class="List-item2" id="{{'in'+3}}">新款专区</text>
+          <view class="List-images"> 
+          <navigator class="List-img mt" wx:for="{{products}}"wx:key="{{id}}" wx:if="{{index>9&&index<19}}" bindtap="jumpList" >
+          <image src="{{item.img_url}}" data-pid="{{item.id}}" ></image>
+          <text data-pid="{{item.id}}">{{item.title}}</text>
+          </navigator>
+          
+        </view>
+      
+        <text class="List-item2" id="{{'in'+4}}">爆款专区</text>
+      <view class="List-images">
+          <navigator class="List-img mt" wx:for="{{products}}"wx:key="{{id}}" wx:if="{{index>2&&index<9}}" bindtap="jumpList" >
+          <image src="{{item.img_url}}" data-pid="{{item.id}}" ></image>
+          <text data-pid="{{item.id}}">{{item.title}}</text>
+          </navigator>
+         
+        </view>
+
+            <text class="List-item2" id="{{'in'+5}}">人气专区</text>
+      <view class="List-images">
+          <navigator class="List-img mt" wx:for="{{products}}"wx:key="{{id}}" wx:if="{{index>2&&index<9}}" bindtap="jumpList" >
+          <image src="{{item.img_url}}" data-pid="{{item.id}}" ></image>
+          <text data-pid="{{item.id}}">{{item.title}}</text>
+          </navigator>
+         
+        </view>
+
+
+       <text class="List-item2" id="{{'in'+6}}">智能新款</text>
+       <view class="List-images pb"> 
+          <navigator class="List-img mt" wx:for="{{products}}"wx:key="{{id}}" wx:if="{{index>9&&index<19}}" bindtap="jumpList" >
+          <image src="{{item.img_url}}" data-pid="{{item.id}}" ></image>
+          <text data-pid="{{item.id}}">{{item.title}}</text>
+          </navigator>
+          
+        </view>
+
+       
+  
+        
+        
+
+
+    
+    </view>
+  </scroll-view>
+
+</view>
+
+
+
