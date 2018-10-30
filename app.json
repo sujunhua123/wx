@@ -1,0 +1,60 @@
+{
+  "pages": [
+      "pages/project/index/index",
+        "pages/project/list/list",
+          "pages/project/news/news",
+        "pages/project/shopCart/shopCart",
+        "pages/project/newsDetail/newsDetail",
+        "pages/project/productDetail/productDetail",      
+        "pages/project/PersonalCenter/Center",
+        "pages/project/userDetail/userDetail"
+     
+   
+
+
+     
+    ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8B572A",
+    "navigationBarTitleText": "珠宝城",
+    "navigationBarTextStyle": "#f00"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#f00",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/project/index/index",
+        "text": "首页",
+        "iconPath": "/tabs/home.png",
+        "selectedIconPath": "/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/project/list/list",
+        "text": "商品分类",
+        "iconPath": "/tabs/2.png",
+        "selectedIconPath": "/tabs/2.2.png"
+      },
+      {
+        "pagePath": "pages/project/news/news",
+        "text": "资讯中心",
+        "iconPath": "/tabs/6.png",
+        "selectedIconPath": "/tabs/6.png"
+      },
+      {
+        "pagePath": "pages/project/shopCart/shopCart",
+        "text": "购物车",
+        "iconPath": "/tabs/5.png",
+        "selectedIconPath": "/tabs/5.5.png"
+      },
+      {
+        "pagePath": "pages/project/PersonalCenter/Center",
+        "text": "个人中心",
+        "iconPath": "/tabs/profile.png",
+        "selectedIconPath": "/tabs/profile-active.png"
+      }
+    ]
+  }
+}
